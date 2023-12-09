@@ -1,31 +1,18 @@
 #include "lists.h"
-
-
 /**
- * dlistint_len - Counts the number of elements in a linked dlistint_t list.
- * @h: The head of the dlistint_t list.
- *
- * Return: The number of elements in the dlistint_t list.
+ * dlistint_len - show us the number of elements in a DLL
+ * @h: a pointer to the head of the DLL
+ * Return: the number of elements in a DLL
  */
 size_t dlistint_len(const dlistint_t *h)
 {
-    /*Variable to store the number of elements in the list.*/
-    size_t nodes = 0;
+	size_t num_of_elements;
 
-
-    while (h)
-    {
-        /*Increment the element count.*/
-        nodes++;
-
-
-
-
-        /*Move to the next element.*/
-        h = h->next;
-    }
-
-
-    /*Return the total number of elements in the list.*/
-    return (nodes);
+	num_of_elements = 0;
+	while (h)
+	{
+		h = h->next;
+		num_of_elements = num_of_elements + 1;
+	}
+	return (num_of_elements);
 }
